@@ -8,28 +8,34 @@ public class Deck {
         Card fill;
         for(int i = 1; i < 14; i++)
         {
-            fill = new Card(1, "Hearts");
+            fill = new Card(i, "Hearts");
             theDeck.add(fill);
         }
         for(int i = 1; i < 14; i++)
         {
-            fill = new Card(1, "Spades");
+            fill = new Card(i, "Spades");
             theDeck.add(fill);
         }
         for(int i = 1; i < 14; i++)
         {
-            fill = new Card(1, "Diamonds");
+            fill = new Card(i, "Diamonds");
             theDeck.add(fill);
         }
         for(int i = 1; i < 14; i++)
         {
-            fill = new Card(1, "Clubs");
+            fill = new Card(i, "Clubs");
             theDeck.add(fill);
         }
     }
 
+    //Shuffles the deck
     public void shuffleDeck()
     {
+        LinkedList<Card> shuffle = null;
 
+        for(int i = 0; i < theDeck.size(); i++)
+        {
+
+        }
     }
 }
