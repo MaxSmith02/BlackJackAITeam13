@@ -1,8 +1,8 @@
 import java.util.LinkedList;
-
+import java.util.Random;
 public class Deck {
     private LinkedList<Card> theDeck;
-
+    private LinkedList<Card> revealedCards;
     public Deck()
     {
         Card fill;
@@ -32,10 +32,20 @@ public class Deck {
     public void shuffleDeck()
     {
         LinkedList<Card> shuffle = null;
-
+        Random rand = new Random();
+        int holdRand = rand.nextInt(52)+1;
         for(int i = 0; i < theDeck.size(); i++)
         {
-
+            shuffle.add(theDeck.get(holdRand));
+            holdRand = rand.nextInt(52-i)+1;
         }
+    }
+
+    public Card drawCard()
+    {
+        Card giveBack = theDeck.getFirst();
+        revealedCards.add(giveBack);
+        theDeck.removeFirst();
+        return giveBack;
     }
 }
