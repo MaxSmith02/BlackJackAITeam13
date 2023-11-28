@@ -45,7 +45,8 @@ public abstract class Player {
     }
 
     /**
-     *
+     * Returns whether or not the player wants to hit or stand
+     * @return true if the player wants to hit
      */
-    public abstract void nextMove();
+    public abstract boolean nextMove();
 }

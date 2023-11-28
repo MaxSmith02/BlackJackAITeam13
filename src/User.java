@@ -6,7 +6,9 @@ public class User extends Player {
     public User(Card firstCard, Card secondCard) {
         initDeal(firstCard, secondCard);
     }
-    public void nextMove() {
+    public boolean nextMove() {
+        // ask for input from the ui
 
+        return false;
     }
 }

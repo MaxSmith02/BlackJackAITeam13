@@ -6,7 +6,8 @@ public class Bot extends Player {
     public Bot(Card firstCard, Card secondCard) {
         initDeal(firstCard, secondCard);
     }
-    public void nextMove() {
-
+    public boolean nextMove() {
+        // The algorithm
+        return false;
     }
 }
