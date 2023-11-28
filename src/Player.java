@@ -11,8 +11,9 @@ public abstract class Player {
      * @param newShown - The first shown card
      */
     public void initDeal(Card newhidden, Card newShown) {
-        hiddenCard = newhidden;
-        visibleCards.add(newShown);
+        this.hiddenCard = newhidden;
+        this.visibleCards = new LinkedList<Card>();
+        this.visibleCards.add(newShown);
     }
 
     /**
