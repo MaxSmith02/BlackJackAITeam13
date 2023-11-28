@@ -25,7 +25,7 @@ public abstract class Player {
 
     /**
      * Returns the cumulative value of all the player's cards
-     * @return sum of all player's cards
+     * @return sum of all player's card values
      */
     public int showingAndHidden() {
         return hiddenCard.value + showing(); //change to get value
@@ -34,7 +34,7 @@ public abstract class Player {
 
     /**
      * Returns the cumulative value of the player's shown cards
-     * @return sum of player's shown cards
+     * @return sum of player's shown card values
      */
     public int showing() {
         int sum = 0;
