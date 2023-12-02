@@ -74,13 +74,18 @@ public abstract class Player {
     public String displayCards(boolean showHidden){
         String cards = "";
         if (showHidden){
-            cards = cards + hiddenCard.value + " ";
+            cards = cards + hiddenCard.displaycard() + ", ";
         }
         else{
             cards = cards + "? ";
         }
         for (int card = 0; card < visibleCards.size(); card++){
-
+            if ((card ==  visibleCards.size() - 1)){
+                cards = cards + visibleCards.get(card).displaycard();
+            }
+            else{
+                cards = cards + visibleCards.get(card).displaycard() + ", ";
+            }
         }
 
         return cards;
