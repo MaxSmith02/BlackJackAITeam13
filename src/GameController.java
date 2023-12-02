@@ -33,24 +33,51 @@ public class GameController {
             currentBet = this.player1.placeBet();
             deck.shuffleDeck();
             playHand();
-
-
         }
+
+        if (playerMoney == 0){
+            donePlaying = true;
+        }
+
+
     }
 
     public void playHand(){
         boolean playerDone = false;
         boolean dealerDone = false;
 
+        dealer.initDeal(deck.dealCard(), deck.dealCard());
+        player1.initDeal(deck.dealCard(), deck.dealCard());
+
         while (!playerDone && dealerDone){
 
+            if(!dealerDone){
+                dealerDone= dealer.nextMove();
+                if(!dealerDone){
+                    dealer.hit(deck.dealCard());
+                }
+            }
+            if(!playerDone){
+                playerDone = player1.nextMove();
+                if(!playerDone){
+                    player1.hit(deck.dealCard());
+                }
+            }
         }
+
+
 
     }
 
 
     public void displayGameStats(){
         System.out.println("The Player has $" + playerMoney);
+        System.out.println("The minimum bet is $" + minBet);
+    }
+
+    public void displayDealerHand(){
+        System.out.println("The dealer's hand:");
+
 
 
     }

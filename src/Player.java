@@ -30,6 +30,15 @@ public abstract class Player {
      * @return sum of all player's card values
      */
     public int showingAndHidden() {
+        if (hiddenCard.value == 1){
+            if (showing() + 11 < 22){
+                return showing() + 11;
+            }
+        }
+        if (hiddenCard.value > 10){
+            return 10 + showing();
+        }
+
         return hiddenCard.value + showing(); //change to get value
 
     }
@@ -40,11 +49,43 @@ public abstract class Player {
      */
     public int showing() {
         int sum = 0;
+        boolean hasAce = false;
         for (int i = 0; i < visibleCards.size(); i++) {
+            if (visibleCards.get(i).value == 1){
+                hasAce = true;
+            }
+            if (visibleCards.get(i).value > 10){
+                sum = sum + 10;
+            }
             sum = sum + visibleCards.get(i).value; //change to get value
+        }
+        if (hasAce){
+            if (sum + 10 < 22){
+                sum = sum + 10;
+            }
         }
         return sum;
     }
+
+    /**
+     * Returns the players card with how they can be seen in game
+     * @return a string showing cards in game
+     */
+    public String displayCards(boolean showHidden){
+        String cards = "";
+        if (showHidden){
+            cards = cards + hiddenCard.value + " ";
+        }
+        else{
+            cards = cards + "? ";
+        }
+        for (int card = 0; card < visibleCards.size(); card++){
+
+        }
+
+        return cards;
+    }
+
 
     /**
      * Returns whether or not the player wants to hit or stand

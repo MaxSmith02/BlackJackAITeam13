@@ -38,4 +38,10 @@ public class Deck {
 
         }
     }
+
+    public Card dealCard(){
+        return theDeck.pop();
+    }
+
+
 }
