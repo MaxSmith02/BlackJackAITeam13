@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public abstract class Player {
     private Card hiddenCard;
@@ -50,4 +51,8 @@ public abstract class Player {
      * @return true if the player wants to hit
      */
     public abstract boolean nextMove();
+
+    public abstract int placeBet();
+
+
 }
