@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Bot extends Player {
 
     public Bot() {
@@ -9,5 +11,9 @@ public class Bot extends Player {
     public boolean nextMove() {
         // The algorithm
         return false;
+    }
+
+    public int placeBet(){
+        return 0;
     }
 }
