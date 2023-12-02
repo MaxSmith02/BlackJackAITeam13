@@ -39,6 +39,12 @@ public class GameController {
     }
 
     public void playHand(){
+        boolean playerDone = false;
+        boolean dealerDone = false;
+
+        while (!playerDone && dealerDone){
+
+        }
 
     }
 
