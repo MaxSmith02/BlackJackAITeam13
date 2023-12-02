@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Dealer extends Player {
 
     public Dealer() {
@@ -13,4 +15,10 @@ public class Dealer extends Player {
         }
         return isHit;
     }
+
+    public int placeBet(){
+        return 0;
+    }
+
+
 }
