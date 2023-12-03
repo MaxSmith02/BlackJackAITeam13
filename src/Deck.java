@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class Deck {
@@ -5,6 +6,7 @@ public class Deck {
 
     public Deck()
     {
+        this.theDeck = new LinkedList<Card>();
         Card fill;
         for(int i = 1; i < 14; i++)
         {
@@ -31,12 +33,7 @@ public class Deck {
     //Shuffles the deck
     public void shuffleDeck()
     {
-        LinkedList<Card> shuffle = null;
-
-        for(int i = 0; i < theDeck.size(); i++)
-        {
-
-        }
+        Collections.shuffle(theDeck);
     }
 
     public Card dealCard(){

@@ -20,7 +20,7 @@ public class Card {
             return "King " + suit;
         }
 
-        return value + " " + "suit";
+        return value + " " + suit;
 
     }
 

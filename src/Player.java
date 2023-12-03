@@ -57,8 +57,12 @@ public abstract class Player {
             if (visibleCards.get(i).value > 10){
                 sum = sum + 10;
             }
-            sum = sum + visibleCards.get(i).value; //change to get value
+            else
+            {
+                sum = sum + visibleCards.get(i).value; //change to get value
+            }
         }
+
         if (hasAce){
             if (sum + 10 < 22){
                 sum = sum + 10;
@@ -77,7 +81,7 @@ public abstract class Player {
             cards = cards + hiddenCard.displaycard() + ", ";
         }
         else{
-            cards = cards + "? ";
+            cards = cards + "?, ";
         }
         for (int card = 0; card < visibleCards.size(); card++){
             if ((card ==  visibleCards.size() - 1)){

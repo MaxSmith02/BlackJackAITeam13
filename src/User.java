@@ -10,7 +10,7 @@ public class User extends Player {
     }
     public boolean nextMove() {
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("How much would you like to get another card (y/n)");
+        System.out.println("Would you like to get another card (y/n)");
         String choice = keyboard.next();
         if (choice.equals("y")){
             return true;
@@ -21,7 +21,6 @@ public class User extends Player {
     public int placeBet(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("How much would you like to bet?");
-        keyboard.nextInt();
         return keyboard.nextInt();
     }
 
