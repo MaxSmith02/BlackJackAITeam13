@@ -9,15 +9,18 @@ public class User extends Player {
         initDeal(firstCard, secondCard);
     }
     public boolean nextMove() {
-        // ask for input from the ui
-
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Would you like to get another card (y/n)");
+        String choice = keyboard.next();
+        if (choice.equals("y")){
+            return true;
+        }
         return false;
     }
 
     public int placeBet(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("How much would you like to bet?");
-        keyboard.nextInt();
         return keyboard.nextInt();
     }
 

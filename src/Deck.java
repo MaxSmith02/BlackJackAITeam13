@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
 public class Deck {
@@ -32,22 +33,13 @@ public class Deck {
     //Shuffles the deck
     public void shuffleDeck()
     {
-        LinkedList<Card> shuffle = new LinkedList<Card>();
-        Random n = new Random();
-        int randVal = n.nextInt(theDeck.size());
-        for(int i = 0; i < 52; i++)
-        {
-            randVal = n.nextInt(theDeck.size());
-            shuffle.add(theDeck.get(randVal));
-            theDeck.remove(randVal);
-            //theDeck.remove(n);
-        }
-        theDeck = shuffle;
+
+        Collections.shuffle(theDeck);
     }
 
-    public Card drawCard()
-    {
-        return theDeck.removeFirst();
+    public Card dealCard(){
+        return theDeck.pop();
     }
+
 
 }
