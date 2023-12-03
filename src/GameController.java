@@ -92,6 +92,7 @@ public class GameController {
                     displayPlayerHand();
                 }
             }
+
             if (dealer.showingAndHidden() > 21){
                 dealerDone = true;
             }
